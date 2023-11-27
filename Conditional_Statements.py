@@ -42,3 +42,21 @@ else:
   output = "you are clinically obese."
 
 print(f"Your BMI is {BMI}, {output}")
+
+firstChoice = input("Do you want to go left or right?\n")
+if not firstChoice.lower() == 'left':
+  print("Fall into a hole.\nGame over.")
+else:
+  secondChoice = input("Do you want to swim or wait?\n")
+  if not secondChoice.lower() == 'wait':
+    print("Attacked by trout.\nGame Over.")
+  else:
+    thirdChoice = input("Red, yellow, or blue door?\n")
+    if thirdChoice.lower() == 'red':
+      print("Burned by fire. Game Over.")
+    elif thirdChoice.lower() == 'blue':
+      print("Eaten by beasts. Game Over")
+    elif thirdChoice.lower() == 'yellow':
+      print("You Win!")
+    else:
+      print("Game Over.")
