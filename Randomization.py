@@ -43,4 +43,54 @@ letter_index = abc.index(letter)
 number_index = int(position[1]) - 1
 map[number_index][letter_index] = "X"
 
+
+# Rock Paper Scissors game
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+#Write your code below this line 👇
+import random
+
+choice = input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors\n")
+choice = int(choice)
+rps = [rock, paper, scissors]
+
+print(rps[choice])
+
+print("\nComputer chose:\n")
+
+compChoice = random.randint(0,2)
+
+print(rps[compChoice])
+
+if choice == compChoice:
+  print("It is a tie!")
+elif (choice - compChoice == 1) or (choice - compChoice == -2):
+  print("You win!")
+else:
+  print("You lose!")
 print(f"{line1}\n{line2}\n{line3}")
