@@ -8,3 +8,17 @@ rand_float = random.random()*5
 print(c)
 # print(my_module.pi)
 print(rand_float)
+
+
+# Lists and List Methods
+list = [1, 2, 3]
+list[1] = "two"
+print(list)
+list.append("four")
+print(list)
+list.extend([5, 6, 7])
+print(list)
+list.reverse()
+print(list)
+list.insert(1, "thisIs2")
+print(list)
