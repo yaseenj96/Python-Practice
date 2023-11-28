@@ -22,3 +22,9 @@ list.reverse()
 print(list)
 list.insert(1, "thisIs2")
 print(list)
+
+# len() length function
+names = ["Ben", "Jesse", "Joy"]
+length = len(names)
+randomint = random.randint(0, (length-1))
+print(f"{names[randomint]} is going to buy the meal today!")
