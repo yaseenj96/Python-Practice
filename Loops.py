@@ -66,7 +66,7 @@ password = ""
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
-
+# Using while loops
 while len(password) < lenPassword:
   randChar = random.randint(0,2)
   if randChar == 0 and not nr_letters == 0:
@@ -78,5 +78,23 @@ while len(password) < lenPassword:
   elif randChar == 2 and not nr_symbols == 0:
     password += symbols[random.randint(0, lenSymbols-1)]
     nr_symbols -= 1
+
+print(password)
+
+# Using for loops
+password_list = []
+for num in range(1, nr_letters+1):
+  password_list.append(letters[random.randint(0, lenLetters-1)])
+
+for num in range(1, nr_symbols+1):
+  password_list += symbols[random.randint(0, lenSymbols-1)]
+
+for num in range(1, nr_numbers+1):
+  password_list += numbers[random.randint(0, lenNumbers-1)]
+
+random.shuffle(password_list)
+
+for char in password_list:
+  password += char
 
 print(password)
