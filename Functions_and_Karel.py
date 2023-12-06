@@ -82,3 +82,15 @@ while not end_of_game:
     #TODO-2: - Import the stages from hangman_art.py and make this error go away.
     from hangman_art import stages
     print(stages[lives])
+
+
+
+## Functions with more than one parameter
+def greet_with(name, location):
+  print(f"Hello {name}")
+  print(f"Isn't the weather nice in {location} today?")
+
+greet_with("Yaseen", "Chicago")
+
+#key word arguments
+greet_with(location = "Budapest", name = "Olaf")
