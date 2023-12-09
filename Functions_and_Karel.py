@@ -130,3 +130,52 @@ while not should_end:
   if restart == "no":
     should_end = True
     print("Goodbye")
+
+
+#Calculator
+#Add
+def add(n1, n2):
+  return n1 + n2
+
+#Subtract
+def subtract(n1, n2):
+  return n1 - n2
+
+#Multiply
+def multiply(n1, n2):
+  return n1 * n2
+
+#Subtract
+def divide(n1, n2):
+  return n1 / n2
+
+from art import logo
+
+operations = {
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "/": divide
+}
+
+def calculator():
+  print(logo)
+  num1 = int(input("What's the first number?: "))
+  for op in operations:
+    print(op)
+  cont = 'y'
+
+#yes start here
+  while cont == 'y':
+    operation = input("Pick an operation: ")
+    num2 = int(input("What's the next number?: "))
+    result = operations[operation](num1, num2)
+    print(f"{num1} {operation} {num2} = {result}")
+    cont = input(f"Type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
+
+    if cont == 'y':
+      num1 = result
+    else:
+      cont = 'n'
+      calculator()
+calculator()
