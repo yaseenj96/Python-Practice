@@ -47,3 +47,29 @@ travel_log = [
    "total_visits": 69
   },
 ]
+
+
+## Blind Bidding code
+from replit import clear
+#HINT: You can call clear() to clear the output in the console.
+from art import logo
+print(logo)
+bids = {}
+print("Welcome to the secret auction program.\n")
+other_bidders = 'yes'
+
+while other_bidders == 'yes':
+  name = input("What is your name?: \n")
+  bid = input("What is your bid?: \n")
+  bids[name] = int(bid)
+  other_bidders = input("Are there any other bidders? Type 'yes' or 'no'.\n")
+  clear()
+
+#Calculate highest bidder
+max_bid = 0
+for name in bids:
+  if bids[name] > max_bid:
+    max_bid = bids[name]
+    max_name = name
+    
+print(f"The winner is {max_name} with a bid of ${max_bid}.")
