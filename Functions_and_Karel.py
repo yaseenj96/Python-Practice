@@ -179,3 +179,21 @@ def calculator():
       cont = 'n'
       calculator()
 calculator()
+
+
+
+## SCOPE
+
+#Global scope
+enemies = 1
+
+#Global constants: (Turn into all upper case)
+PI = 3.14159
+
+def increase_enemies():
+    return enemies + 1
+
+def calc():
+    return PI * 4
+
+
